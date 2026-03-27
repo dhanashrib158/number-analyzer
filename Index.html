@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Analyzer</title>
+</head>
+<body>
+
+<h2>Number Analyzer</h2>
+
+<input type="number" id="numInput" placeholder="Enter a number">
+<button onclick="checkNumber()">Check</button>
+
+<p id="result"></p>
+
+<script>
+function checkNumber() {
+    var num = document.getElementById("numInput").value;
+    var result = "";
+
+    // Even or Odd
+    if (num % 2 == 0) {
+        result += "Even ";
+    } else {
+        result += "Odd ";
+    }
+
+    // Positive or Negative
+    if (num >= 0) {
+        result += "and Positive";
+    } else {
+        result += "and Negative";
+    }
+
+    document.getElementById("result").innerText = result;
+}
+</script>
+
+</body>
+</html>
